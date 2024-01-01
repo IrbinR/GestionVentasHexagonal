@@ -38,4 +38,9 @@ public class FacturaDetalleServiceImpl implements FacturaDetalleInput {
     public Optional<FacturaDetalle> search(Long id) {
         return facturaDetalleOutput.search(id);
     }
+
+    @Override
+    public List<FacturaDetalle> mostrarProductos(Long id) {
+        return facturaDetalleOutput.mostrarProductos(id);
+    }
 }

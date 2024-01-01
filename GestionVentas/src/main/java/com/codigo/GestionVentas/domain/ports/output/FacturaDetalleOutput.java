@@ -11,4 +11,5 @@ public interface FacturaDetalleOutput {
     public Optional<FacturaDetalle> update(Long id, FacturaDetalle facturaDetalle);
     public Optional<FacturaDetalle> delete(Long id);
     public Optional<FacturaDetalle> search(Long id);
+    public List<FacturaDetalle> mostrarProductos(Long id);
 }

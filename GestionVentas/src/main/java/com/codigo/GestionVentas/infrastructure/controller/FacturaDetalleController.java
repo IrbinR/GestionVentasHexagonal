@@ -52,4 +52,8 @@ public class FacturaDetalleController {
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+    @GetMapping("/mostrarProductos/{id}")
+    public ResponseEntity<List<FacturaDetalle>> mostrarProductos(@PathVariable Long id) {
+        return new ResponseEntity<>(facturaDetalleService.mostrarProductos(id), HttpStatus.OK);
+    }
 }

@@ -52,4 +52,11 @@ public class FacturaDetalleAdapter implements FacturaDetalleOutput {
     public Optional<FacturaDetalle> search(Long id) {
         return facturaDetalleRepository.findById(id).map(FacturaDetalleEntity::entityModel);
     }
+
+    @Override
+    public List<FacturaDetalle> mostrarProductos(Long id) {
+        List<FacturaDetalle> productos = new ArrayList<>();
+        facturaDetalleRepository.mostrarProductos(id).forEach(n->productos.add(n.entityModel()));
+        return productos;
+    }
 }
